@@ -1,0 +1,45 @@
+Group Name: SoloCode
+Members: Noah Kelly
+
+
+class Item {
+private:
+    int weight;
+    //Other methods/members
+public:
+    Item(int w...) : weight(w)... {}
+    int getWeight() {
+        return weight;
+    //Implement the rest of your code
+};
+
+class Inventory {
+private:
+    int totalWeight;
+    const int maxWeight = (a number of your choosing);
+    //Other methods/members
+
+public:
+    Inventory() : totalWeight(0)... {}
+
+    void addItem(Item& item) {
+        if (numItems < maxItems && totalWeight + item.getWeight() <= maxWeight) {
+            Item* newItem = new Item(item.getName(), item.getWeight(), head);
+            head = newItem;
+            numItems++;
+            totalWeight += item.getWeight();
+            cout << "\nAdded " << item.getName() << " to inventory." << endl;
+        }
+        else {
+            cout << "\nCannot add " << item.getName() << " to inventory." << endl;
+            cout << "Weight capacity exceeded." << endl;
+        }
+    }
+
+    //Do a similar process to remove the item
+
+    void displayInventory() {
+        //Add your additional code here
+        cout << "Total Weight: " << totalWeight << "/" << maxWeight << endl;
+    }
+};
